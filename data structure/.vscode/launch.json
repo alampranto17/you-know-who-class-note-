@@ -2,14 +2,35 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Debug LongestPalindromicSubstring",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "D:/leetcode-Problem solving/LongestPalindromicSubstring.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "D:/leetcode-Problem solving",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/code of c++ and c/data structure",
-      "program": "d:/code of c++ and c/data structure/build/Debug/outDebug",
+      "cwd": "d:/code of c++ and c/youknowwho/data structure",
+      "program": "d:/code of c++ and c/youknowwho/data structure/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

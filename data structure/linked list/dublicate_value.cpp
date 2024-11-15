@@ -65,66 +65,66 @@ Node* value(Node* head,int n)
 //
 //    }
 
-Node * mergeTwoLists(Node* list1, Node* list2) {
-
-        Node* temp=list1;
-        Node* newlist=NULL;
-        Node* newlisthead=NULL;
-        Node* temp2=list2;
-
-        while(temp!=NULL && temp2!=NULL)
-        {
-                Node* addnode;
-        if(temp->data>=temp2->data)
-        {
-
-            addnode=temp2;
-            temp2=temp2->next;
-
-
-
-
-        }
-        else
-        {
-
-            addnode=temp;
-            temp=temp->next;
-
-
-
-
-        }
-
-        if(newlisthead==NULL)
-        {
-            newlisthead=addnode;
-            newlist=newlisthead;
-
-        }
-        else
-        {
-            newlist->next=addnode;
-            newlist=newlist->next;
-
-        }
-
-        }
-
-        if(temp!=NULL)
-        {
-            newlist->next=temp;
-        }
-        if(temp2!=NULL)
-        {
-            newlist->next=temp2;
-
-        }
-
-        return newlisthead;
-
-
-    }
+//Node * mergeTwoLists(Node* list1, Node* list2) {
+//
+//        Node* temp=list1;
+//        Node* newlist=NULL;
+//        Node* newlisthead=NULL;
+//        Node* temp2=list2;
+//
+//        while(temp!=NULL && temp2!=NULL)
+//        {
+//                Node* addnode;
+//        if(temp->data>=temp2->data)
+//        {
+//
+//            addnode=temp2;
+//            temp2=temp2->next;
+//
+//
+//
+//
+//        }
+//        else
+//        {
+//
+//            addnode=temp;
+//            temp=temp->next;
+//
+//
+//
+//
+//        }
+//
+//        if(newlisthead==NULL)
+//        {
+//            newlisthead=addnode;
+//            newlist=newlisthead;
+//
+//        }
+//        else
+//        {
+//            newlist->next=addnode;
+//            newlist=newlist->next;
+//
+//        }
+//
+//        }
+//
+//        if(temp!=NULL)
+//        {
+//            newlist->next=temp;
+//        }
+//        if(temp2!=NULL)
+//        {
+//            newlist->next=temp2;
+//
+//        }
+//
+//        return newlisthead;
+//
+//
+//    }
 
 //int solve(Node* head){
 //
@@ -154,6 +154,48 @@ Node * mergeTwoLists(Node* list1, Node* list2) {
 //return sum;
 //}
 
+void addTwoNumbers(Node* l1, Node* l2) {
+
+Node* temp=l1;
+Node* temp2=l2;
+int i=0;
+int sum=0;
+while(temp!=NULL)
+{
+
+   int current=(pow(10,i))*temp->data;
+   sum+=current;
+   temp=temp->next;
+   i++;
+}
+
+ i=0;
+int sum2=0;
+while(temp2!=NULL)
+{
+
+   int current=(pow(10,i))*temp2->data;
+   sum2+=current;
+   temp2=temp2->next;
+   i++;
+}
+
+sum=sum+sum2;
+
+
+
+while(sum!=0)
+{
+    int p=sum%10;
+    cout<<p<<endl;
+    sum=sum/10;
+}
+
+
+
+
+    }
+
 
 int main()
 {
@@ -171,7 +213,7 @@ int main()
 
 
 
-
+addTwoNumbers(head, head2);
 
 
 //   head = removeDuplicates(head);
@@ -185,12 +227,12 @@ int main()
 
 //cout<<solve(head)<<endl;
 
-Node* a= mergeTwoLists(head,head2);
-while(a!=NULL)
-   {
-       cout<<a->data<<" ";
-        a=a->next;
-    }
+//Node* a= mergeTwoLists(head,head2);
+//while(a!=NULL)
+//   {
+//       cout<<a->data<<" ";
+//        a=a->next;
+//    }
 
 
 

@@ -87,8 +87,17 @@ int main ()
 
     for(int i =0;i<n;i++)
     {
+         cout<<"enter the value : ";
         int m,left,right;
-        cin>>m>>left>>right;
+        cin>>m;
+        cout<<endl;
+        cout<<"enter current node left index : ";
+        cin>>left;
+        cout<<endl;
+
+        cout<<"enter current node right index : ";
+        cin>>right;
+        cout<<endl;
 
         arr[i]->value=m;
 
