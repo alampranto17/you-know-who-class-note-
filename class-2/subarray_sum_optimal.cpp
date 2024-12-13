@@ -19,10 +19,10 @@ int main()
        cin>>arr[i];
    }
 
-   long long max_main= LLONG_MIN;
-   long long max_far = LLONG_MIN;
+   long long max_main= arr[0];
+   long long max_far = arr[0];
 
-   for(int i =0;i<n;i++)
+   for(int i =1;i<n;i++)
    {
        max_far=max(arr[i],max_far+arr[i]);
        cout<<i<<" . "<<max_far<<endl;
